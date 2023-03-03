@@ -31,5 +31,3 @@ jobs:
 
       - name: Run Test
       - run: mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
-
-
