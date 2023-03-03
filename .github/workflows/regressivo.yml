@@ -2,7 +2,8 @@ name: Testes Regressivos
 
 on:
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   RunTest:
