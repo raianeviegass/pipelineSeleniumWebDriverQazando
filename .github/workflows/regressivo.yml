@@ -34,6 +34,7 @@ jobs:
         run: mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
 
       - name: Run Test
+        if: always()
         run: mvn cluecumber-report:reporting
 
       - name: Arquivar relatório
