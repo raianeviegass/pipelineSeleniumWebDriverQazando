@@ -2,11 +2,8 @@ name: Testes Regressivos
 
 on:
   pull_request:
-    branches:
-      - master
-  push:
-    branches-ignore:
-      - master
+    trigger: none
+    branches: [ master ]
 
 jobs:
   RunTest:
@@ -35,3 +32,10 @@ jobs:
 
       - name: Run Test
         run: mvn test -Dtest=RunCucumber -Dbrowser=chrome-ci cluecumber-report:reporting
+
+      - name: Arquivar relatório
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: report-execution
+          path: “**/formated-report/”
