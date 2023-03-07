@@ -2,11 +2,8 @@ name: Testes Regressivos
 
 on:
   pull_request:
-    branches:
-      - master
-  push:
-    branches-ignore:
-      - master
+    trigger: none
+    branches: [ master ]
 
 jobs:
   RunTest:
