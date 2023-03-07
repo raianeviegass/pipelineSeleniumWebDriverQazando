@@ -4,6 +4,8 @@ on:
   pull_request:
     trigger: none
     branches: [ master ]
+  schedules:
+     - cron: "*/5 * * * 1-5"
 
 jobs:
   RunTest:
